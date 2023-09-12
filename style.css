@@ -71,16 +71,7 @@ body, html {
   border-radius: 10px;
 }
 
-@media (max-width:600px){
-  .toggle-button{
-    display: flex;
-  }
 
-  .navbar-links{
-    display: none;
-  }
-
-}
 
 
 /* Parallax effect*/
@@ -148,7 +139,7 @@ p{
 }
 
 .service-card{
-  height: 60vh;
+  height: 50vh;
   width:30vw;
   border: solid 2px #f1f1f1;
   border-radius: 15px;
@@ -167,7 +158,26 @@ p{
 }
 
 
+@media (max-width:600px){
+  .toggle-button{
+    display: flex;
+  }
 
+  .navbar-links{
+    display: none;
+  }
+
+  .services{
+    flex-direction: column;
+  }
+  
+  .service-card{
+    width: 80vw;
+  }
+
+  
+
+}
 
 
 
