@@ -5,7 +5,7 @@ const observer = new IntersectionObserver((entries) => {
     })
 },
 {
-    threshold:0.7,
+    threshold:0.5,
 }
 )
 
@@ -20,7 +20,7 @@ const slideObserver = new IntersectionObserver((entries) => {
     })
 },
 {
-    threshold:1,
+    threshold:0.7,
 }
 )
 

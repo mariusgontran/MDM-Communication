@@ -320,8 +320,13 @@ h3{
 
 @media (max-width:900px){
 
+  :root {
+    --navbar-height: 3rem;
+    --footer-height: 2rem;
+    --main-height: calc(100svh - ( (var(--navbar-height)) + (var(--footer-height)) ))
+  }
+
   .navbar{
-    height: 3rem;
     justify-content: center;
   }
   .navbar-logo{
@@ -333,7 +338,7 @@ h3{
   }
 
   .section-content{
-    width: 100svw;
+    width: 100vw;
   }
 
   h2{
@@ -345,17 +350,67 @@ h3{
   }
 
   .about-us-flex{
+    width: 80vw;
     flex-direction: column-reverse;
     gap: 1em;
   }
 
   .abt-pic1{
-    height: 200px;
+    display: none;
+
   }
 
   .about-us-content{
     font-size: 1em;
+    text-align: justify;
   }
+
+  .services{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;    
+  }
+
+  .service-card{
+    font-size: 1em;;
+  }
+
+  .services-icon{
+    height: 5rem;
+
+  }
+
+  .brands-card h3{
+    font-size: 1.5em;
+  }
+
+  .brands-flex{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .brand-logo{
+      height: 2vh;
+      max-width: 40vw;
+  }
+
+  .contact-us-content{
+    width: 80vw;
+    flex-direction: column;
+  }
+
+  .contact-us-details{
+    font-size: 1.5em;
+    align-items: center;
+  }
+
+  footer{
+    padding-left: 1em;
+
+  }
+
+
 
 
 
