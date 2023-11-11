@@ -11,8 +11,28 @@ body, html {
   font-family: 'Titillium Web', sans-serif;
 }
 
+:root {
+  --navbar-height: 5rem;
+  --footer-height: 15px;
+  --main-height: calc(100svh - ( (var(--navbar-height)) + (var(--footer-height)) ))
+}
+
+h2{
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  font-size: 5em;
+}
+
+
+p{
+  margin: 0 0 0 0;
+}
+
 /*Navbar*/
 .navbar{
+    padding-left: 2em;
+    padding-right: 2em;
+    height: var(--navbar-height);
     position: sticky;
     top: 0;
     width: 100svw;
@@ -27,7 +47,11 @@ body, html {
 
 .navbar-logo{
   height: 4rem;
-  margin: 1rem; 
+  margin: 0 0 0 0; 
+}
+
+.navbar-links{
+  font-size: 1.5em;
 }
 
 .navbar-links ul{
@@ -55,29 +79,23 @@ body, html {
   transition: 500ms ease-in-out; 
 }
 
-.toggle-button {
-  top: .75rem;
-  left: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
+
+footer{
+  width: 100vw;
+  height: var(--footer-height);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.toggle-button .bar{
-  height: 3px;
-  width: 100%;
-  background-color: #f1f1f1;
-  border-radius: 10px;
-}
 
 
 
 
 /* Parallax effect*/
 .wrapper{
-    height: 100vh;
+    height: var(--main-height);
     width: 100vw;
     overflow-y: auto;
     overflow-x: hidden;
@@ -87,8 +105,8 @@ body, html {
 
 .background{
   position: absolute;
-  Height: 100%;
-  Width: 100%;
+  height:100%;
+  width: 100%;
   object-fit : cover;
   transform: translateZ(-10px) scale(2);
   z-index:-1;
@@ -99,7 +117,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 80%;
   transform-style: preserve-3d;
   z-index: -1;
 }
@@ -112,69 +130,238 @@ body, html {
 
 /* Content */
 section{
-  padding-top: 4rem;
-  min-height: 80vh;  
+  padding: 4rem;
+  min-height: 60svh;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 .section-dark{
   background: black;
 }
 
-.About-us-content{
-  max-width: 80vw;
+.section-light{
+  background: #f1f1f1;
+  color: black;
 }
 
-h2{
-  font-size: 5rem;
-}
-
-p{
-  font-size: 1.5rem;
+.section-content{
+  max-width: 1800px;
 }
 
 
 
-.services{
-  width: 100vw;
+/* About Us */
+.about-us-flex{
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;  
+  gap: 10rem;
+  text-align: center;
+  
+}
+.about-us-content{  
+  font-size: 1.5rem;
+  text-align: left;
+  
+}
+
+.tagline{
+  font-size: 3rem;
+  text-align: right;
+
+}
+
+
+.abt-pic1{
+  height: 40vh;
+  border-radius: 42% 58% 70% 30% / 30% 50% 50% 70% ;
+}
+
+
+
+
+
+
+
+
+/* Services */
+.services{
+  margin-top: 2em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: 5em;  
 }
 
 .service-card{
-  height: 50vh;
-  width:30vw;
+  padding: 1em 1em 1em 1em;
+  font-size: 1.5em;
   border: solid 2px #f1f1f1;
   border-radius: 15px;
   display: flex;
+  gap:1em;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
   justify-content:flex-start;
+  text-align: justify;
+}
+
+.service-card:hover{
+  border: solid 2px #186BB5;
+  transition: 50ms ease-in-out; 
+
 }
 
 
 .services-icon{
+  margin: 0 0 0 0;
   z-index:1;
-  padding-top: 2rem;
   height: 10rem;
   filter: invert(100%) sepia(3%) saturate(722%) hue-rotate(199deg) brightness(114%) contrast(89%);
 }
 
 h3{
+  margin: 0 0 0 0;
   font-size: 2rem;
 }
 
+.brands-card{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding: 1em;
+  color: black;
+  background: #f1f1f1;
+  border-radius: 15px;
+}
 
-@media (max-width:600px){
-  .toggle-button{
-    display: flex;
+.brands-flex{
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items:center;
+  gap: 1em;
+}
+
+
+.brand-logo{
+  height: 5vh;
+  max-width: 20vw;
+}
+
+/* Contact Us */
+.contact-us-content{
+  display: flex;
+  justify-items: center;
+  align-items:center;
+  gap: 4em;
+}
+
+.contact-us-details{
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items:flex-start;
+  gap: 1em;
+
+}
+
+
+.contact-us-details a{
+  text-decoration: none;
+  color:#cccccc;
+}
+
+.contact-us-details a:hover{
+  color:#186BB5;
+  transition: 500ms ease-in-out; 
+}
+
+/*Animations*/
+.hidden{
+  opacity: 0;
+  transition: all 1.5s;
+}
+
+.show{
+  opacity: 1;
+}
+
+.hidden-slide{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.slide{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.service-card:nth-child(2){
+  transition-delay: 300ms;
+
+}
+
+.service-card:nth-child(3){
+  transition-delay: 600ms;  
+}
+
+
+
+
+@media (max-width:900px){
+
+  .navbar{
+    height: 3rem;
+    justify-content: center;
+  }
+  .navbar-logo{
+    height: 2.3rem;
   }
 
   .navbar-links{
     display: none;
   }
+
+  .section-content{
+    width: 100svw;
+  }
+
+  h2{
+    font-size: 3em;
+  }
+
+  .tagline{
+    font-size: 1.5rem;  
+  }
+
+  .about-us-flex{
+    flex-direction: column-reverse;
+    gap: 1em;
+  }
+
+  .abt-pic1{
+    height: 200px;
+  }
+
+  .about-us-content{
+    font-size: 1em;
+  }
+
+
+
+
+
+
 
   .services{
     flex-direction: column;
@@ -182,9 +369,7 @@ h3{
   
   .service-card{
     width: 80vw;
-  }
-
-  
+  } 
 
 }
 

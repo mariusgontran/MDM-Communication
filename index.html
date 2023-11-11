@@ -10,100 +10,139 @@
         <meta name="description" content="MDM Communication Intercoms Access Control CCTV Installation and Service">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     </head>
 
-    <body>        
-        <div class = wrapper>
+    <body> 
+        <nav class="navbar">
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-services">Our Services</a></li>
+                    <li><a href="#our-projects">Our Projects</a></li>
+                    <li><a href="#contact-us">Contact Us</a> </li>
+                </ul>
+            </div>
+            <a href="#top"><img src="img/White_logo_void.svg" class="navbar-logo"></a>
+            
+        </nav>         
+        <div class = "wrapper">
             <img src="img/pexels-ying-owens-802599.jpg" class="background"> 
 
-            <nav class="navbar">
-                <div class="navbar-links">
-                    <ul>
-                        <li><a href="#about-us">About Us</a></li>
-                        <li><a href="#our-services">Our Services</a></li>
-                        <li><a href="#our-projects">Our Projects</a></li>
-                        <li><a href="#contact-us">Contact Us</a> </li>
-                    </ul>
-                </div>
-                <a href="#" class="toggle-button">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a>
-                <img src="img/White_logo_void.svg" class="navbar-logo">
-            </nav>        
+      
 
-            <div class = "hero-section">
+            <div class = "hero-section" id="top">
                 <img src="img/White_logo_void.svg" class="hero-logo">
             </div>     
        
-            <section class="section-dark" id="about-us">
-                    <h2>About Us</h2>
-                    <div class="About-us-content">
-                        <p>Welcome to MDM Communication, your trusted partner in 
-                            cutting-edge communication and security solutions. 
-                            Formerly known as Marmic Communications, we have 
-                            been a beacon of excellence in the industry since 
-                            our establishment in 2008. With over 15 years of 
-                            dedicated experience, we take pride in serving the 
-                            diverse communication needs of Melbourne.</p>
-                        <p>At MDM Communication, we are experts in the intricate 
-                            world of communication systems. We specialize in 
-                            the installation and servicing of cutting-edge 
-                            security solutions, including CCTV systems, access 
-                            control systems, and intercoms. Our team brings a 
-                            wealth of experience to every project, ensuring that 
-                            our clients receive top-notch service and solutions 
-                            tailored to their unique needs.</p>                        
-                        <p>Our services extend to the entire metro area, with a 
-                            special focus on the CBD and inner suburbs. Whether 
-                            you are a homeowner, business owner, or property 
-                            manager, we are here to enhance your security and 
-                            communication systems, providing peace of mind and 
-                            convenience.</p>             
+            <section class="section-light" id="about-us">
+                <div class="section-content">
+                    <h2>About Us</h2> 
+                    
+                    <div class="tagline">
+                        Keeping you secured and connected since 2008
                     </div>
+                    <div class="about-us-flex">
+                        <div>  
+                            <div class="about-us-content hidden">
+                                <p>MDM Communication, formerly Marmic Communications established in 2008, has over 15 years of experience in communication systems. Specializing in Melbourne's CBD and inner suburbs, we excel in installing and servicing security systems, including CCTV, access control, and intercoms. Our team, with extensive expertise, provides tailored solutions for residential and commercial needs.</p>
+                                <p>Choose MDM for cutting-edge intercoms that enhance security and communication, advanced access control systems for fortified protection, and state-of-the-art CCTV systems ensuring 24/7 surveillance and remote monitoring. Trust us to bring peace of mind to your property with our reliable and customized security solutions.</p>             
+                            </div>
+                        </div> 
 
+    
+                        <div>
+                            <img src="img/intercom.jpeg" alt="Intercom picture" height="300" class="hidden-slide abt-pic1">
+                        </div>
+    
+
+    
+                    </div>
+                </div>
             </section>
 
             <section class="section-dark" id="our-services">
+                <div class="section-content">
                     <h2>Our Services</h2>
-
                     <div class="services">
-                        <div class = "service-card">
+                        <div class = "service-card hidden">
                             <img class="services-icon" src="img/intercom.svg" alt="intercom">
                             <h3>Intercoms</h3>
+                            <p>
+                                Elevate security and communication with our intercoms installations. Effortlessly control access and screen visitors for residential or commercial spaces, fostering a secure and connected environment.
+                                
+                            </p>
                         </div>
-                        <div class = "service-card">
-                            <img class="services-icon" src="img/access-control.svg" alt="intercom">
+                        <div class = "service-card hidden">
+                            <img class="services-icon" src="img/access-control.svg" alt="access control">
                             <h3>Access Control</h3>
+                            <p>
+                                Manage and restrict entry with tailored solutions, from keyless entry to biometric authentication, ensuring protection for valuable assets and confidential areas.
+                            </p>
                         </div>
-                        <div class = "service-card">
-                            <img class="services-icon" src="img/cctv.svg" alt="intercom">
+                        <div class = "service-card hidden">
+                            <img class="services-icon" src="img/cctv.svg" alt="cctv">
                             <h3>CCTV</h3>
+                            <p>
+                                Safeguard your property with our advanced CCTV systems. Obtain peace of mind by installing high-definition cameras and intelligent recording.
+                            </p>
                         </div>
+
+                        <div class = "brands-card">
+                            <h3>Brands we work with:</h3>
+    
+                            <div class="brands-flex">
+                                    <img class="brand-logo hidden-slide" src="img/urmet-logo.png" alt="URMET">
+                                    <img class="brand-logo hidden-slide" src="img/AIPHONE_Logo.svg" alt="AIPHONE">
+                                    <img class="brand-logo hidden-slide" src="img/Dorani_Logo.png" alt="DORANI">
+                                    <img class="brand-logo hidden-slide" src="img/dahua_logo.png" alt="DAHUA">
+                                    <img class="brand-logo hidden-slide" src="img/hikvision-logo.webp" alt="HIKVISION">
+                                    <img class="brand-logo hidden-slide" src="img/fermax.jpg" alt="FERMAX">
+                            </div>
+    
+    
+                        </div>
+
                     </div>
 
+
+                </div>
             </section>
 
-            <section class="" id="our-projects">
+            <section class="section-light" id="our-projects">
+                <div class="section-content">
                     <h2>Our Projects</h2>
+                </div>
+
+
 
             </section>
 
-            <section class="" id="contact-us">
-                    <h2>Contact Us</h2>
+            <section class="section-dark" id="contact-us">
+                <div class="section-content">
+                    <div class="contact-us-content">
+                        <h2>Contact Us</h2>
+                        <div class="contact-us-details hidden">
+                            <div>PO Box 6035 Clyde 3978</div>
+                            <div><a href="mailto:marmiccomm@yahoo.com.au">marmiccomm@yahoo.com.au</a></div>
+                            <div><a href="tel:0431219064">0431 219 064</a></div>                      
+                            ABN 71 263 032 826 | ACN 652 927 501
+                        </div>
 
+                    </div>
+
+                </div>       
             </section>
 
 
-            <footer>
 
-
-            </footer>
         </div>
+        <footer>
+            © 2022 MDM Communication Pty Ltd ATF The Masset Family Trust trading as Marmic Communications. All rights reserved.
+        </footer>
     </body>
 
 </html>
