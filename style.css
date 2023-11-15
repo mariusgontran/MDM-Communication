@@ -315,6 +315,10 @@ h3{
   transition-delay: 600ms;  
 }
 
+#our-projects{
+  display: none;
+}
+
 
 
 
